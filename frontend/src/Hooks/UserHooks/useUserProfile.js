@@ -32,7 +32,7 @@ const useUserProfile = () => {
 
             if (profile.profileImage) {
                 // const correctPath = profile.profileImage.replace(/\\g/, "/");
-                setprofileImage(`http://localhost:3000/${profile.profileImage}`);
+                setprofileImage(`https://mahimatourandtravels.onrender.com/${profile.profileImage}`);
             }
             setisProfileCreated(true);
         } catch (error) {

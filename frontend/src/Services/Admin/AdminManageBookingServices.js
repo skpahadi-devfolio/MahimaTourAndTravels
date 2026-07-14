@@ -5,7 +5,7 @@
 export const GetAllBookingList = async() => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch('http://localhost:3000/api/admin-dashboard/manageBooking', {method: "GET", headers: {Authorization: `Bearer ${token}`}});
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/admin-dashboard/manageBooking', {method: "GET", headers: {Authorization: `Bearer ${token}`}});
         const result = await response.json();
         if(!response.ok){
             return {success: false, message: result.message};
@@ -25,7 +25,7 @@ export const GetAllBookingList = async() => {
 export const AcceptedUserBooking = async(bookingId) => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch(`http://localhost:3000/api/admin-dashboard/acceptBooking/${bookingId}`, {method: "PUT", headers:{Authorization: `Bearer ${token}`}});
+        const response = await fetch(`https://mahimatourandtravels.onrender.com/api/admin-dashboard/acceptBooking/${bookingId}`, {method: "PUT", headers:{Authorization: `Bearer ${token}`}});
         const result = await response.json();
         if(!response.ok){
             return {success: false, message: result.message};
@@ -47,7 +47,7 @@ export const AcceptedUserBooking = async(bookingId) => {
 export const RejectUserBooking = async(bookingId) => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch(`http://localhost:3000/api/admin-dashboard/rejectBooking/${bookingId}`, {method: "PUT", headers: {Authorization: `Bearer ${token}`}});
+        const response = await fetch(`https://mahimatourandtravels.onrender.com/api/admin-dashboard/rejectBooking/${bookingId}`, {method: "PUT", headers: {Authorization: `Bearer ${token}`}});
         const result = await response.json();
         if(!response.ok){
             return {success: false, message: result.message};

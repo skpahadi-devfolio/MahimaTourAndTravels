@@ -30,7 +30,7 @@ const useAdminProfile = () => {
             setsaveProfile({ username: profile.username, bioDesc: profile.bioDesc, phone: profile.phone, email: profile.email });
 
             if (profile.profileImage) {
-                setprofileImage(`http://localhost:3000/${profile.profileImage}`);
+                setprofileImage(`https://mahimatourandtravels.onrender.com/${profile.profileImage}`);
             }
             setisProfileCreated(true);
         } catch (error) {

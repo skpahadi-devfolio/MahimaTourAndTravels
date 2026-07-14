@@ -3,7 +3,7 @@
 //Signup API Calling:-
 export const SignupUser = async(form) => {
     try {
-        const response = await fetch('http://localhost:3000/api/auth/signup', {method: "POST", headers:{"Content-Type": "application/json"},
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/auth/signup', {method: "POST", headers:{"Content-Type": "application/json"},
         body: JSON.stringify(form)})
         const result = await response.json();
         if(!response.ok){
@@ -22,7 +22,7 @@ export const SignupUser = async(form) => {
 //Login API Calling:-
 export const LoginUser = async(form) => {
     try {
-        const response = await fetch('http://localhost:3000/api/auth/login', {method: "POST", headers:{"Content-Type": "application/json"},
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/auth/login', {method: "POST", headers:{"Content-Type": "application/json"},
             body: JSON.stringify(form)})
             const result = await response.json();
             if(!response.ok){

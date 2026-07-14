@@ -5,7 +5,7 @@
 export const CreateFeedback = async(data) => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch('http://localhost:3000/api/user-dashboard/createFeedback', {method: "POST", headers: {"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/user-dashboard/createFeedback', {method: "POST", headers: {"Content-Type": "application/json", Authorization: `Bearer ${token}`},
         body: JSON.stringify(data)})
         const result = await response.json();
         if(!response.ok){
@@ -26,7 +26,7 @@ export const CreateFeedback = async(data) => {
 export const GetFeedback = async() => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch('http://localhost:3000/api/user-dashboard/yourFeedback', {method: "GET", headers: {Authorization: `Bearer ${token}`}});
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/user-dashboard/yourFeedback', {method: "GET", headers: {Authorization: `Bearer ${token}`}});
         const result = await response.json();
         if(!response.ok){
             return {success: false, message: result.message};
@@ -47,7 +47,7 @@ export const GetFeedback = async() => {
 export const UpdateFeedback = async(feedbackId, data) => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch(`http://localhost:3000/api/user-dashboard/updateFeedback/${feedbackId}`, {method: "PUT", headers: {"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+        const response = await fetch(`https://mahimatourandtravels.onrender.com/api/user-dashboard/updateFeedback/${feedbackId}`, {method: "PUT", headers: {"Content-Type": "application/json", Authorization: `Bearer ${token}`},
         body: JSON.stringify(data)});
         const result = await response.json();
         if(!response.ok){
@@ -70,7 +70,7 @@ export const UpdateFeedback = async(feedbackId, data) => {
 export const DeleteFeedback = async(feedbackId) => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch(`http://localhost:3000/api/user-dashboard/deleteFeedback/${feedbackId}`, {method: "DELETE", headers: {Authorization: `Bearer ${token}`}});
+        const response = await fetch(`https://mahimatourandtravels.onrender.com/api/user-dashboard/deleteFeedback/${feedbackId}`, {method: "DELETE", headers: {Authorization: `Bearer ${token}`}});
         const result = await response.json();
         if(!response.ok){
             return {success: false, message: result.message};

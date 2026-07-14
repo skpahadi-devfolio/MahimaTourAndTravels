@@ -6,7 +6,7 @@
 export const CreateBooking = async (data) => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch('http://localhost:3000/api/user-dashboard/createBooking', {
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/user-dashboard/createBooking', {
             method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
             body: JSON.stringify(data)
         });
@@ -32,7 +32,7 @@ export const CreateBooking = async (data) => {
 export const GetBooking = async () => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch('http://localhost:3000/api/user-dashboard/yourBooking', { method: "GET", headers: { Authorization: `Bearer ${token}` } })
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/user-dashboard/yourBooking', { method: "GET", headers: { Authorization: `Bearer ${token}` } })
         const result = await response.json();
         if (!response.ok) {
             return { success: false, message: result.message };

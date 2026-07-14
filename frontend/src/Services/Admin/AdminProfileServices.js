@@ -14,7 +14,7 @@ export const CreateAdminProfile = async(data, file) => {
         if(file){
             formData.append("profileImage", file);
         }
-        const response = await fetch('http://localhost:3000/api/admin-dashboard/createProfile', {method: "POST", headers: {Authorization: `Bearer ${token}`},
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/admin-dashboard/createProfile', {method: "POST", headers: {Authorization: `Bearer ${token}`},
         body: formData});
         const result = await response.json();
         if(!response.ok){
@@ -35,7 +35,7 @@ export const CreateAdminProfile = async(data, file) => {
 export const GetAdminProfile = async() => {
     try {
         const token = localStorage.getItem("Token");
-        const response = await fetch('http://localhost:3000/api/admin-dashboard/Profile', {method: "GET", headers: {Authorization: `Bearer ${token}`}});
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/admin-dashboard/Profile', {method: "GET", headers: {Authorization: `Bearer ${token}`}});
         const result = await response.json();
         if(!response.ok){
             return {success: false, message: result.message};
@@ -64,7 +64,7 @@ export const UpdateAdminProfile = async(data, file) => {
         if(file){
             formData.append("profileImage", file);
         }
-        const response = await fetch('http://localhost:3000/api/admin-dashboard/updateProfile', {method: "PUT", headers: {Authorization: `Bearer ${token}`},
+        const response = await fetch('https://mahimatourandtravels.onrender.com/api/admin-dashboard/updateProfile', {method: "PUT", headers: {Authorization: `Bearer ${token}`},
         body: formData});
         const result = await response.json();
         if(!response.ok){
