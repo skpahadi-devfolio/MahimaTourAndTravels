@@ -59,8 +59,8 @@ const Login = () => {
 
       <h1 className='bg-gradient-to-r from-pink-700 to-violet-700 bg-clip-text text-transparent md:text-2xl text-lg font-bold text-center my-10'>Welcome to Login Page</h1>
 
-      {isSubmitting && <div className='bg-gradient-to-r from-black to-gray-900 text-white text-center font-bold p-2 w-[15vw] md:max-w-2xl flex justify-center items-center flex-col gap-3 mx-auto'>
-            <p className='border-6 border-gray-400 border-t-transparent h-10 w-10 rounded-full animate-spin'></p>
+      {isSubmitting && <div className='bg-gradient-to-r from-black to-gray-900 text-white text-center font-bold p-2 md:w-[15vw] w-40 md:max-w-2xl flex justify-center items-center flex-col gap-3 mx-auto'>
+            <p className='border-6 border-gray-400 border-t-transparent h-10 w-10  rounded-full animate-spin'></p>
             <p>Login in</p>
             </div>}
 
@@ -70,11 +70,14 @@ const Login = () => {
           <div className='flex flex-col gap-2'>
             <label htmlFor="email">Email</label>
             <input className='bg-gradient-to-r from-white to-gray-500 p-4 rounded-md' type="email" name='email' placeholder='Enter Your Email' {...register("email", { required: true, maxLength: { value: 30, message: "Max 30th Character Allow" } })} />
+            {errors.email && <div className="text-black">{errors.email.message}</div>}
           </div>
+      
 
           <div className='flex flex-col gap-2'>
             <label htmlFor="password">Password</label>
             <input className='bg-gradient-to-r from-white to-gray-500 p-4 rounded-md' type="password" placeholder='Enter Your Password' {...register("password", { required: true, minLength: { value: 8, message: "Minimum 8 Length Required" }, maxLength: { value: 20, message: "Maximum 20 Length Available" } })} />
+            {errors.password && <div className="text-black">{errors.password.message}</div>}
           </div>
 
           <div className='bg-gradient-to-r from-blue-800 to-cyan-700 w-full flex justify-center items-center my-4 rounded-md'>

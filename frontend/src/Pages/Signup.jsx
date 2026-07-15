@@ -52,7 +52,7 @@ const Signup = () => {
 
       <h1 className='text-center bg-gradient-to-r from-violet-300 to-cyan-400 bg-clip-text text-transparent font-bold md:text-2xl text-xl my-8'>Welcome to Signup Page</h1>
 
-          {isSubmitting && <div className='bg-gradient-to-r from-black to-gray-900 text-white text-center font-bold p-2 w-[15vw] md:max-w-2xl flex justify-center items-center flex-col gap-3 mx-auto'>
+          {isSubmitting && <div className='bg-gradient-to-r from-black to-gray-900 text-white text-center font-bold p-2 md:w-[15vw] w-40 md:max-w-2xl flex justify-center items-center flex-col gap-3 mx-auto'>
             <p className='border-6 border-gray-400 border-t-transparent animate-spin h-10 w-10 rounded-full'></p>
             <p>Sign in</p>
             </div>}
