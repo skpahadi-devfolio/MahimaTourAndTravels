@@ -4,6 +4,8 @@ import mahimaImage from "../assets/Mahima Image.jpg"
 import goljiyuImage from "../assets/goljiyu.png"
 import Footer from '../Components/Footer'
 import TypeAnimationText from '../Components/TypeAnimationText'
+import Fadeleft from "../Animations/Fadeleft"
+import Faderight from "../Animations/Faderight"
 
 const Home = () => {
   return (
@@ -34,7 +36,8 @@ const Home = () => {
             </div>
 
 
-            <div className="md:absolute left-text grid grid-cols-1 w-[90vw] md:max-w-lg gap-5 my-10 text-white mx-auto md:text-lg text-xs">
+            <Fadeleft>
+                <div className="md:absolute left-text grid grid-cols-1 w-[90vw] md:max-w-lg gap-5 my-10 text-white mx-auto md:text-lg text-xs">
                 
                 <div className='flex flex-col bg-gradient-to-r from-violet-950 to-slate-900 p-5 rounded-2xl shadow-lg shadow-cyan-700'>
                 <p>24 X 7</p>
@@ -55,13 +58,16 @@ const Home = () => {
                 </div>
                 
             </div>
+            </Fadeleft>
 
 
-            <div className="absolute md:right-text md:right-10 right-4 md:my-8 opacity-70">
+            <Faderight>
+                <div className="absolute md:right-text md:right-10 right-4 md:my-8 opacity-70">
                 <div className="Mahima-Image md:h-[59vh] h-76 w-76 md:w-[28vw] rounded-full overflow-hidden">
                     <img className='object-cover md:h-[60vh] md:w-[59vw] h-full w-full' src={mahimaImage} alt="Mahima" />
                 </div>
             </div>
+            </Faderight>
 
         
             <div className='bottom-text text-white text-center mt-96 py-40'>

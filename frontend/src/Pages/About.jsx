@@ -6,6 +6,7 @@ import Nandan from '../assets/Nanda.jpg'
 import pradeep from '../assets/Pradeep.jpg'
 import lachu from '../assets/Hemu.jpg'
 import jagdish from '../assets/Hemu.jpg'
+import Fadedown from "../Animations/Fadedown"
 
 const About = () => {
   return (
@@ -26,16 +27,18 @@ const About = () => {
     
            {/* Driver-heading        */}
             <p className='text-center md:text-4xl text-2xl text-white my-10 font-bold'>Works in Mahima Motors</p>
-           <div className="driver-section grid grid-cols-1 md:grid-cols-3 gap-8 p-4 w-[90vw] md:max-w-5xl mx-auto">
-            <div className="first flex flex-col justify-center items-center bg-gradient-to-r from-violet-950 to-pink-900 p-4 rounded-3xl gap-3">
+            <div className="driver-section grid grid-cols-1 md:grid-cols-3 gap-8 p-4 w-[90vw] md:max-w-5xl mx-auto">
+           <Fadedown>
+            <div className="first flex flex-col justify-center items-center bg-gradient-to-r from-violet-950 to-pink-900 p-4 rounded-3xl gap-3 ">
               <div className="imge-circle md:h-[30vh] md:w-[14vw] h-40 w-40 rounded-full overflow-hidden">
               <img className="md:h-[30vh] md:w-[14vw] h-full w-full object-cover" src={hemant} alt="Hemu kaira" />
               </div>
               <p>Hemant kaira (Hemu)</p>
               <p>Mobile:- 8395026861</p>
             </div>
+            </Fadedown>
             
-
+            <Fadedown>
             <div className="second flex flex-col justify-center items-center bg-gradient-to-r from-violet-950 to-pink-900 p-4 rounded-3xl gap-3">
             <div className="imge-circle md:h-[30vh] md:w-[14vw] h-40 w-40 rounded-full overflow-hidden">
               <img className="md:h-[30vh] md:w-[14vw] h-full w-full object-top" src={Nandan} alt="Nandan manral" />
@@ -43,7 +46,9 @@ const About = () => {
               <p>Nandan Manral</p>
               <p>Mobile:- 7065275343</p>
             </div>
+            </Fadedown>
 
+            <Fadedown>
             <div className="third flex flex-col justify-center items-center bg-gradient-to-r from-violet-950 to-pink-900 p-4 rounded-3xl gap-3">
               <div className="imge-circle md:h-[30vh] md:w-[14vw] h-40 w-40 rounded-full overflow-hidden">
               <img className="md:h-[30vh] md:w-[14vw] h-full w-full object-cover" src={pradeep} alt="pradeep kaira" />
@@ -51,7 +56,9 @@ const About = () => {
               <p>Pradeep Singh Kaira</p>
               <p>Mobile:- 9761626367</p>
             </div>
+            </Fadedown>
 
+             <Fadedown>
             <div className="fourth flex flex-col justify-center items-center bg-gradient-to-r from-violet-950 to-pink-900 p-4 rounded-3xl gap-3">
             <div className="imge-circle md:h-[30vh] md:w-[14vw] h-40 w-40 rounded-full overflow-hidden">
               <img className="md:h-[30vh] md:w-[14vw] h-full w-full object-cover" src={lachu} alt="Lachu" />
@@ -59,7 +66,10 @@ const About = () => {
               <p>Laksman Singh (Lacchu)</p>
               <p>Mobile:- 7065275343</p>
             </div>
+            </Fadedown>
 
+
+             <Fadedown>
             <div className="fifth flex flex-col justify-center items-center bg-gradient-to-r from-violet-950 to-pink-900 p-4 rounded-3xl gap-3">
               <div className="imge-circle md:h-[30vh] md:w-[14vw] h-40 w-40 rounded-full overflow-hidden">
               <img className="md:h-[30vh] md:w-[14vw] h-full w-full object-cover" src={jagdish} alt="jagdish" />
@@ -67,6 +77,7 @@ const About = () => {
               <p>Jagdish Singh</p>
               <p>Mobile:- 7906087052</p>
             </div>
+           </Fadedown>
 
            </div>
 

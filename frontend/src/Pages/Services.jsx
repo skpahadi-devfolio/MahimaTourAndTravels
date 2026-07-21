@@ -4,6 +4,8 @@ import Footer from '../Components/Footer'
 import DelhitoChakhuitya from '../assets/delhi to chakhutiya.jpg'
 import shaadiBooking from '../assets/shaadi booking.jpg'
 import charDam from '../assets/chardam.jpg'
+import Fadeleft from "../Animations/Fadeleft";
+import Faderight from "../Animations/Faderight"
 
 const Services = () => {
   return (
@@ -17,6 +19,7 @@ const Services = () => {
             <div className='grid grid-cols-1 gap-14 w-[90vw] md:max-w-4xl mx-auto my-10'>
 
               {/* first-services */}
+              <Fadeleft>
               <div className="outer-animation rounded-3xl shadow-2xl shadow-cyan-700 animate-glow">
                 <div className="first-service text-xs md:text-base rounded-3xl flex flex-col md:flex-row justify-center gap-10 items-center bg-gradient-to-r from-violet-900 to-pink-800 p-5">
                 <div className="flex justify-center items-center flex-col gap-5 w-full">
@@ -32,9 +35,11 @@ const Services = () => {
                </div>
             </div>
               </div>
+              </Fadeleft>
 
 
             {/* second-services */}
+            <Faderight>
             <div className="outer-animation rounded-3xl shadow-2xl shadow-cyan-700 animate-glow">
               <div className="second-service rounded-3xl text-xs md:text-base flex flex-col md:flex-row justify-center gap-10 items-center bg-gradient-to-r from-violet-900 to-pink-800 p-5">
               <div className="flex flex-col gap-5">
@@ -49,9 +54,11 @@ const Services = () => {
                </div>
             </div>
             </div>
+            </Faderight>
 
 
               {/* third-services */}
+              <Fadeleft>
               <div className="outer-animation rounded-3xl shadow-2xl shadow-cyan-700 animate-glow">
               <div className="third-service rounded-3xl flex flex-col text-xs md:text-base md:flex-row justify-center gap-10 items-center bg-gradient-to-r from-violet-900 to-pink-800 p-5">
               <div className='flex justify-center items-center flex-col gap-5 w-full'>
@@ -66,6 +73,7 @@ const Services = () => {
               </div>
             </div>
             </div>
+            </Fadeleft>
             
             </div>
             <Footer/>
